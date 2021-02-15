@@ -34,6 +34,11 @@ app.get('/docs', (req, res) => {
   res.send(apiDocs);
 });
 
+app.get('/generate_seed', (req, res) => {
+  const seed = wallet.generateWalletWords()
+  res.send({seed: seed);
+});
+
 /**
  * POST request to start a new wallet
  * For the docs, see api-docs.js
