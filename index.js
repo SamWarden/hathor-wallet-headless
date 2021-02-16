@@ -36,7 +36,7 @@ app.get('/docs', (req, res) => {
 
 app.get('/generate_seed', (req, res) => {
   const seed = wallet.generateWalletWords()
-  res.send({seed: seed);
+  res.send({seed: seed});
 });
 
 /**
